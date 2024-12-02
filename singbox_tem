@@ -58,6 +58,8 @@
 
    "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换", "♻️ 自动选择", "🎯 全球直连"] },
+    { "tag": "🎯 myvps", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["myhk"]}]},
+    { "tag": "🎯 MT选择", "type": "selector", "outbounds": ["🐸 手动切换", "🎯 全球直连"] },
     { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
@@ -87,7 +89,13 @@
       { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
-      { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
+      { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one","ping.vovovo.eu.org"], "outbound": "🎯 全球直连" },
+      { "DOMAIN-KEYWORD": ["metatrader5","metatrader5", "exness"], "outbound": "🎯 MT选择" },
+      { "DOMAIN-SUFFIX": ["vovovo.eu.org","idc.wiki", "hetzner.com","spartanhost.net","olink.cloud","usbx.me","jd.com","epicgames.com","teacher.com.cn","idc.best","acl4.ssr"], "outbound": "🎯 全球直连" },
+      { "DOMAIN-SUFFIX": ["msftconnecttest.com","v2ex.com", "free-proxy.cz","duyaoss.com","emby.wtf"], "outbound": "🚀 节点选择" },
+      { "DOMAIN-SUFFIX": ["ssh.vovovo.eu.org","bing.com"], "outbound": "🎯 myvps" },
+      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
+      { "DOMAIN-KEYWORD": "direct", "outbound": "🎯 全球直连" },
       { "rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-chat", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-github", "outbound": "👨‍💻 Github" },
@@ -101,6 +109,7 @@
       { "rule_set": ["geoip-telegram", "geosite-telegram"], "outbound": "📲 Telegram" },
       { "rule_set": "geosite-geolocation-!cn", "outbound": "🚀 节点选择" },
       { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "🎯 全球直连" }
+
     ],
     
     "rule_set": [
