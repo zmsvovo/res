@@ -90,7 +90,7 @@
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
-      { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one","ping.vovovo.eu.org"], "outbound": "🎯 全球直连" },
+      { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one","ping.vovovo.eu.org","de.vovovo.top"], "outbound": "🎯 全球直连" },
       { "domain_keyword": ["metatrader5","metatrader5", "exness"], "outbound": "🎯 MT选择" },
       { "domain_suffix": ["vovovo.eu.org","idc.wiki", "hetzner.com","spartanhost.net","olink.cloud","usbx.me","jd.com","customercontrolpanel.de","epicgames.com","teacher.com.cn","idc.best","acl4.ssr"], "outbound": "🎯 全球直连" },
       { "domain_suffix": ["msftconnecttest.com","v2ex.com", "free-proxy.cz","duyaoss.com","emby.wtf"], "outbound": "🚀 节点选择" },
